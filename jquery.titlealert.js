@@ -7,7 +7,7 @@
  * @name jQuery.titleAlert
  * @projectDescription Show alert message in the browser title bar
  * @author Jonatan Heyman | http://heyman.info
- * @version 0.5.0
+ * @version 0.6.0
  * @license MIT License
  * 
  * @id jQuery.titleAlert
