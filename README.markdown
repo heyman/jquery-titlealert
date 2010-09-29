@@ -28,8 +28,8 @@ Parameters and Options
 	<td>A string  the message that should be flashed in the browser title.</td>
 </tr>
 <tr>
-	<td><b>options</b></td>
-	<td valign="top">
+	<td valign="top"><b>options</b></td>
+	<td>
 JavaScript object containing options
 
 <table>
