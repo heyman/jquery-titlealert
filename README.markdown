@@ -24,10 +24,11 @@ Parameters and Options
 
 **message**: A string  the message that should be flashed in the browser title.
 **options**: JavaScript object containing options
- * **interval** - The flashing interval in milliseconds (default: 500).
- * **duration** - The total lenght of the flashing before it is automatically stopped. Zero means infinite (default: 0).
- * **stopOnFocus** - If true, the flashing will stop when the window gets focus (default: true).
- * **requireBlur** -  Experimental. If true, the call will be ignored unless the window is out of focus (default: false). Known issues: Firefox doesn't recognize tab switching as blur, and there are some minor IE problems as well.
+
+* **interval** - The flashing interval in milliseconds (default: 500).
+* **duration** - The total lenght of the flashing before it is automatically stopped. Zero means infinite (default: 0).
+* **stopOnFocus** - If true, the flashing will stop when the window gets focus (default: true).
+* **requireBlur** -  Experimental. If true, the call will be ignored unless the window is out of focus (default: false). Known issues: Firefox doesn't recognize tab switching as blur, and there are some minor IE problems as well.
 
 
 License
