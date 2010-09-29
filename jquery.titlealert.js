@@ -1,13 +1,14 @@
 /**
  * jQuery.titleAlert
  *
- * Copyright (c) 2009 ESN | http://esndev.com | http://esn.me
+ * Copyright (c) 2009 ESN | http://esn.me
  * Jonatan Heyman | http://heyman.info
  * 
  * @name jQuery.titleAlert
  * @projectDescription Show alert message in the browser title bar
  * @author Jonatan Heyman | http://heyman.info
  * @version 0.5.0
+ * @license MIT License
  * 
  * @id jQuery.titleAlert
  * @param {String} text The text that should be flashed in the browser title
@@ -16,7 +17,7 @@
  *	 @option {Number} duration The total lenght of the flashing before it is automatically stopped. Zero means infinite (default: 0).
  *	 @option {Boolean} stopOnFocus If true, the flashing will stop when the window gets focus (default: true).
  *	 @option {Boolean} requireBlur Experimental. If true, the call will be ignored unless the window is out of focus (default: false).
- *								   Known issues: Firefox doesn't recognize tab switching as blur, and there are some minor IE problems as well.
+ *			               Known issues: Firefox doesn't recognize tab switching as blur, and there are some minor IE problems as well.
  *
  * @example $.titleAlert("Hello World!", {requireBlur:true, stopOnFocus:true, duration:10000, interval:500});
  * @desc Flash title bar with text "Hello World!", if the window doesn't have focus, for 10 seconds or until window gets focused, with an interval of 500ms
