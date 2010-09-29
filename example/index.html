@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example page for jQuery-titlealert</title>
+</head>
+<body>
+
+<script src="http://code.jquery.com/jquery-1.4.2.js"></script>
+<script src="../jquery.titlealert.js"></script>
+
+
+<input type="button" value="default title alert" onclick="$.titleAlert('Flashing with default settings');" />
+<input type="button" value="{interval:200}" onclick="$.titleAlert('Hello World', {interval:200});" />
+<input type="button" value="{duration:3000, stopOnFocus:false}" onclick="$.titleAlert('Hello for 3 seconds', {duration:3000, stopOnFocus:false});" />
+
+</body>
+</html>
