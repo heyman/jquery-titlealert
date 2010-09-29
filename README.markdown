@@ -22,14 +22,47 @@ Parameters and Options
 
 <pre>jQuery.titleAlert(message, options)</pre>
 
-**message**: A string  the message that should be flashed in the browser title.
-**options**: JavaScript object containing options
+<table>
+<tr>
+	<td><b>message</b></td>
+	<td>A string  the message that should be flashed in the browser title.</td>
+</tr>
+<tr>
+	<td><b>options</b></td>
+	<td>JavaScript object containing options
 
-* **interval** - The flashing interval in milliseconds (default: 500).
-* **duration** - The total lenght of the flashing before it is automatically stopped. Zero means infinite (default: 0).
-* **stopOnFocus** - If true, the flashing will stop when the window gets focus (default: true).
-* **requireBlur** -  Experimental. If true, the call will be ignored unless the window is out of focus (default: false). Known issues: Firefox doesn't recognize tab switching as blur, and there are some minor IE problems as well.
+<table>
+<tr>
+	<th>name</th>
+	<th>default</th>
+	<th>description</th>
+</tr>
+<tr>
+	<td>interval</td>
+	<td>500</td>
+	<td>The flashing interval in milliseconds.</td>
+</tr>
+<tr>
+	<td>duration</td>
+	<td>0</td>
+	<td>The total lenght of the flashing before it is automatically stopped. Zero means infinite.</td>
+</tr>
+<tr>
+	<td>stopOnFocus</td>
+	<td>true</td>
+	<td>If true, the flashing will stop when the window gets focus.</td>
+</tr>
+<tr>
+	<td>requireBlur</td>
+	<td>false</td>
+	<td>Experimental. If true, the call will be ignored unless the window is out of focus. Known issues: Firefox doesn't recognize tab switching as blur, and there are some minor IE problems as well.</td>
+</tr>
+</table>
 
+
+</td>
+</tr>
+</table>
 
 License
 -------
