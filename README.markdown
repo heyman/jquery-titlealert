@@ -29,7 +29,8 @@ Parameters and Options
 </tr>
 <tr>
 	<td><b>options</b></td>
-	<td>JavaScript object containing options
+	<td valign="top">
+JavaScript object containing options
 
 <table>
 <tr>
