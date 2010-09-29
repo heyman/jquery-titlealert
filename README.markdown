@@ -43,6 +43,10 @@ Parameters and Options
 	<td>The flashing interval in milliseconds.</td>
 </tr>
 <tr>
+	<td>originalTitleInterval</td>
+	<td>null</td>
+	<td>Time in milliseconds that the original title is diplayed for. If null the time is the same as interval.</td>
+<tr>
 	<td>duration</td>
 	<td>0</td>
 	<td>The total lenght of the flashing before it is automatically stopped. Zero means infinite.</td>

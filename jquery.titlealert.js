@@ -14,6 +14,7 @@
  * @param {String} text The text that should be flashed in the browser title
  * @param {Object} settings Optional set of settings.
  *	 @option {Number} interval The flashing interval in milliseconds (default: 500).
+ *	 @option {Number} originalTitleInterval Time in milliseconds that the original title is diplayed for. If null the time is the same as interval (default: null).
  *	 @option {Number} duration The total lenght of the flashing before it is automatically stopped. Zero means infinite (default: 0).
  *	 @option {Boolean} stopOnFocus If true, the flashing will stop when the window gets focus (default: true).
  *	 @option {Boolean} requireBlur Experimental. If true, the call will be ignored unless the window is out of focus (default: false).
@@ -35,19 +36,20 @@
 		if (settings.requireBlur && $.titleAlert.hasFocus)
 			return;
 		
+		// originalTitleInterval defaults to interval if not set
+		settings.originalTitleInterval = settings.originalTitleInterval || settings.interval;
+		
 		$.titleAlert._running = true;
 		$.titleAlert._initialText = document.title;
 		document.title = text;
 		var showingAlertTitle = true;
 		
-		$.titleAlert._intervalToken = setInterval(function() {
-			// WTF! Sometimes Internet Explorer calls the interval function an extra time!
-			if (!$.titleAlert._running)
-				return;
-			
-			showingAlertTitle = !showingAlertTitle;
-			document.title = (showingAlertTitle ? text : $.titleAlert._initialText);
-		}, settings.interval);
+		var switchTitle = function() {
+		    showingAlertTitle = !showingAlertTitle;
+		    document.title = (showingAlertTitle ? text : $.titleAlert._initialText);
+		    $.titleAlert._intervalToken = setTimeout(switchTitle, (showingAlertTitle ? settings.interval : settings.originalTitleInterval));
+		}
+		$.titleAlert._intervalToken = setTimeout(switchTitle, settings.interval);
 		
 		// check if a duration is specified
 		if (settings.duration > 0) {
@@ -60,6 +62,7 @@
 	// default settings
 	$.titleAlert.defaults = {
 		interval: 500,
+		originalTitleInterval: null,
 		duration:0,
 		stopOnFocus: true,
 		requireBlur: false
@@ -67,7 +70,7 @@
 	
 	// stop current title flash
 	$.titleAlert.stop = function() {
-		clearInterval($.titleAlert._intervalToken);
+		clearTimeout($.titleAlert._intervalToken);
 		clearTimeout($.titleAlert._timeoutToken);
 		document.title = $.titleAlert._initialText;
 		
