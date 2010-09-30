@@ -68,9 +68,6 @@ JavaScript object containing options
 </tr>
 </table>
 
-</td>
-</tr>
-</table>
 
 License
 -------
