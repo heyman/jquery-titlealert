@@ -58,6 +58,11 @@ JavaScript object containing options
 	<td>If true, the flashing will stop when the window gets focus.</td>
 </tr>
 <tr>
+	<td>stopOnMouseMove</td>
+	<td>false</td>
+	<td>If true, the flashing will stop when the document recieves a mousemove event (i.e. when the user moves the mouse over the document area, regardless of what window is active).</td>
+</tr>
+<tr>
 	<td>requireBlur</td>
 	<td>false</td>
 	<td>Experimental. If true, the call will be ignored unless the window is out of focus. Known issues: Firefox doesn't recognize tab switching as blur, and there are some minor IE problems as well.</td>
