@@ -94,6 +94,9 @@
 	
 	// stop current title flash
 	$.titleAlert.stop = function() {
+		if (!$.titleAlert._running)
+			return;
+		
 		clearTimeout($.titleAlert._intervalToken);
 		clearTimeout($.titleAlert._timeoutToken);
 		document.title = $.titleAlert._initialText;
