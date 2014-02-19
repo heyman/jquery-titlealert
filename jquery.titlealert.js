@@ -36,7 +36,20 @@
  * @example $.titleAlert("Hello World!", {requireBlur:true, stopOnFocus:true, duration:10000, interval:500});
  * @desc Flash title bar with text "Hello World!", if the window doesn't have focus, for 10 seconds or until window gets focused, with an interval of 500ms
  */
-;(function($){	
+
+//@author Ryan McGeary 
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+ 
+    // AMD. Register as an anonymous module.
+    define(['jquery'], factory);
+
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+
+  }(function($){	
 	$.titleAlert = function(text, settings) {
 		// check if it currently flashing something, if so reset it
 		if ($.titleAlert._running)
@@ -140,4 +153,4 @@
 	// bind focus and blur event handlers
 	$(window).bind("focus", $.titleAlert._focus);
 	$(window).bind("blur", $.titleAlert._blur);
-})(jQuery);
+}));
