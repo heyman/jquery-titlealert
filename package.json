@@ -1,0 +1,22 @@
+{
+  "name": "jquery-titlealert",
+  "version": "1.0.0",
+  "description": "Flashes the page title with a custom message.",
+  "main": "jquery.titlealert.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyman/jquery-titlealert.git"
+  },
+  "author": "Jonatan Heyman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heyman/jquery-titlealert/issues"
+  },
+  "homepage": "https://github.com/heyman/jquery-titlealert#readme"
+}
