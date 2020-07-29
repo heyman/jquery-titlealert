@@ -29,7 +29,7 @@
  *	 @option {Number} originalTitleInterval Time in milliseconds that the original title is diplayed for. If null the time is the same as interval (default: null).
  *	 @option {Number} duration The total lenght of the flashing before it is automatically stopped. Zero means infinite (default: 0).
  *	 @option {Boolean} stopOnFocus If true, the flashing will stop when the window gets focus (default: true).
- *   @option {Boolean} stopOnMouseMove If true, the flashing will stop when the browser window recieves a mousemove event. (default:false).
+ *  	 @option {Boolean} stopOnMouseMove If true, the flashing will stop when the browser window recieves a mousemove event. (default:false).
  *	 @option {Boolean} requireBlur Experimental. If true, the call will be ignored unless the window is out of focus (default: false).
  *                                 Known issues: Firefox doesn't recognize tab switching as blur, and there are some minor IE problems as well.
  *
